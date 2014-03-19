@@ -1,4 +1,4 @@
-package model;
+package com.model;
 
 import org.springframework.data.neo4j.annotation.GraphId;
 import org.springframework.data.neo4j.annotation.NodeEntity;
@@ -8,9 +8,9 @@ import org.springframework.data.neo4j.annotation.NodeEntity;
  */
 
 @NodeEntity
-public class ProductCategory {
+public class PublisherCategory {
 
     @GraphId private Long id;
 
-
+    private String categoryName;
 }

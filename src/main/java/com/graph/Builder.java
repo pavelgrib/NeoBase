@@ -1,4 +1,4 @@
-package graph;
+package com.graph;
 
 import org.neo4j.graphdb.GraphDatabaseService;
 import org.neo4j.graphdb.Node;
@@ -15,7 +15,7 @@ import java.util.HashSet;
 
 /**
  * Created by paul.gribelyuk on 1/3/14.
- * Builds a Neo4j graph to study Consumer transaction data
+ * Builds a Neo4j com.graph to study Consumer transaction data
  */
 public class Builder {
 
@@ -81,8 +81,8 @@ public class Builder {
             trans_values.add( split[headers.get(trans_key)] );
         }
 
-        // if TID in graph ---> skip
-        // else if ORDERID in graph
+        // if TID in com.graph ---> skip
+        // else if ORDERID in com.graph
             // if product doesn't exist ---> create Product
             // else create CONTAINS link from Order to Product
         // else if

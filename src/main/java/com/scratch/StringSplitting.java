@@ -1,4 +1,4 @@
-package scratch;
+package com.scratch;
 
 import java.util.StringTokenizer;
 

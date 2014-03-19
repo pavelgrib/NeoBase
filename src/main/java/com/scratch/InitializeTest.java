@@ -1,4 +1,4 @@
-package scratch;
+package com.scratch;
 
 /**
  * Created by paul.gribelyuk on 3/17/14.

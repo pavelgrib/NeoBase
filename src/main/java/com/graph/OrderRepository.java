@@ -1,6 +1,6 @@
-package graph;
+package com.graph;
 
-import model.Order;
+import com.model.Order;
 import org.springframework.data.neo4j.repository.GraphRepository;
 
 /**
@@ -9,6 +9,6 @@ import org.springframework.data.neo4j.repository.GraphRepository;
 
 interface OrderRepository extends GraphRepository<Order> {
 
-    Iterable<Person> findByActorsMoviesActorName(name)
+//    Iterable<Person> findByActorsMoviesActorName(name)
 }
 

@@ -1,4 +1,4 @@
-package model;
+package com.model;
 
 import org.springframework.data.neo4j.annotation.GraphId;
 import org.springframework.data.neo4j.annotation.Indexed;
@@ -12,12 +12,16 @@ import java.util.Collection;
  */
 
 @NodeEntity
-public class Advertiser {
-    @GraphId private Long id;
-    @Indexed(unique = true)
-    private int mid;
-    private String name;
+public class Order {
+    @GraphId
+    private Long id;
 
-    @RelatedTo(type = "OF_CATEGORY") AdvertiserCategory category;
-    @RelatedTo(type = "MADE_OFFER") Collection<Offer> offers;
+    @Indexed(unique = true)
+    private String orderId;
+
+    public Advertiser advertiser;
+
+    @RelatedTo(type = "CONTAINS") Collection<Product> products;
+    @RelatedTo(type = "ORDERED") Consumer consumer;
+
 }

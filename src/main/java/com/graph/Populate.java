@@ -1,6 +1,5 @@
-package graph;
+package com.graph;
 
-import com.sun.xml.internal.bind.api.impl.NameConverter;
 import org.neo4j.graphdb.GraphDatabaseService;
 
 import java.io.*;
@@ -14,7 +13,7 @@ import java.util.List;
 /**
  * Created by paul.gribelyuk on 3/17/14.
  *
- * A useful class to populate a collection of Nodes into a graph database
+ * A useful class to populate a collection of Nodes into a com.graph database
  */
 public class Populate {
 

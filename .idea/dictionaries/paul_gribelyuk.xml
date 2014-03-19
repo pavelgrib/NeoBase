@@ -2,8 +2,10 @@
   <dictionary name="paul.gribelyuk">
     <words>
       <w>fstream</w>
+      <w>graphdb</w>
       <w>gribelyuk</w>
       <w>orderid</w>
+      <w>springframework</w>
       <w>uorderid</w>
       <w>zipcode</w>
     </words>

@@ -1,6 +1,5 @@
-package graph;
+package com.graph;
 
-import model.Location;
 import org.neo4j.graphdb.GraphDatabaseService;
 
 /**

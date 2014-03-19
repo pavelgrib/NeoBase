@@ -1,7 +1,6 @@
-package model.dates;
+package com.model;
 
 import org.springframework.data.neo4j.annotation.GraphId;
-import org.springframework.data.neo4j.annotation.Indexed;
 import org.springframework.data.neo4j.annotation.NodeEntity;
 
 /**
@@ -9,10 +8,9 @@ import org.springframework.data.neo4j.annotation.NodeEntity;
  */
 
 @NodeEntity
-public class Year {
+public class ProductCategory {
 
     @GraphId private Long id;
-    @Indexed(unique = true) private int year;
 
 
 }
