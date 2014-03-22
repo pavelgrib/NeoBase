@@ -1,9 +1,7 @@
 package com.model;
 
-import org.springframework.data.neo4j.annotation.GraphId;
-import org.springframework.data.neo4j.annotation.Indexed;
-import org.springframework.data.neo4j.annotation.NodeEntity;
-import org.springframework.data.neo4j.annotation.RelatedTo;
+import com.graph.locations.LatLong;
+import org.springframework.data.neo4j.annotation.*;
 
 import java.util.Collection;
 
@@ -12,9 +10,7 @@ import java.util.Collection;
  */
 
 @NodeEntity
-public class Order {
-    @GraphId
-    private Long id;
+public class Order  extends AbstractEntity {
 
     @Indexed(unique = true)
     private String orderId;
@@ -23,5 +19,6 @@ public class Order {
 
     @RelatedTo(type = "CONTAINS") Collection<Product> products;
     @RelatedTo(type = "ORDERED") Consumer consumer;
+    @Fetch @RelatedTo(type = "PLACED_FROM") LatLong latlong;
 
 }

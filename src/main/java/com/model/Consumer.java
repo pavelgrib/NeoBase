@@ -13,8 +13,7 @@ import java.util.HashMap;
  */
 
 @NodeEntity
-public class Consumer {
-    @GraphId private Long id;
+public class Consumer extends AbstractEntity{
     @Indexed(unique = true)
     private long username;
 

@@ -11,7 +11,7 @@ import org.springframework.data.neo4j.support.index.IndexType;
  */
 
 @NodeEntity
-public class Product {
+public class Product  extends AbstractEntity {
 
     @Indexed(indexType = IndexType.FULLTEXT, indexName = "product") private String name;
 

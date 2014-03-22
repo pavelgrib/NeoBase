@@ -11,9 +11,7 @@ import java.util.Date;
  */
 
 @NodeEntity
-public class Offer {
-
-    @GraphId private Long id;
+public class Offer  extends AbstractEntity {
 
     @Indexed(unique = true) private String offerId;
 
