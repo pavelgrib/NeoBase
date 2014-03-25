@@ -8,6 +8,14 @@
     <artifactId>NeoBase</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <target.jdk>1.7</target.jdk>
+        <spring.data.version>3.0.1.RELEASE</spring.data.version>
+        <spring.version>3.1.4.RELEASE</spring.version>
+        <javacsv.version>2.0</javacsv.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.neo4j</groupId>
@@ -30,13 +38,25 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-neo4j</artifactId>
-            <version>3.0.1.RELEASE</version>
+            <version>${spring.data.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>4.0.2.RELEASE</version>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sourceforge.javacsv</groupId>
+            <artifactId>javacsv</artifactId>
+            <version>${javacsv.version}</version>
         </dependency>
 
     </dependencies>

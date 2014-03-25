@@ -15,7 +15,7 @@ public class Product  extends AbstractEntity {
 
     @Indexed(indexType = IndexType.FULLTEXT, indexName = "product") private String name;
 
-    // a map is necessary when multiple merchants sell the same product
+    // a map is necessary when multiple advertisers sell the same product
     private String sku;
 
     private ProductCategory category;
