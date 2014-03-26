@@ -40,22 +40,22 @@ public class Builder {
     public Builder() {
         graphDb = new GraphDatabaseFactory().newEmbeddedDatabase(DB_PATH);
 
-        headers = new HashMap<>();
+//        headers = new HashMap<>();
     }
 
     private void processFile(String filename) {
         Charset set = Charset.forName("UTF-8");
         Path file = FileSystems.getDefault().getPath(filename);
-        try (BufferedReader reader = Files.newBufferedReader(file, set)) {
-            String line = null;
-            line = reader.readLine();
-            processHeaders(line);
-            while ((line = reader.readLine()) != null) {
-                processLine(line);
-            }
-        } catch (IOException x) {
-            System.err.format("IOException: %s%n", x);
-        }
+//        try (BufferedReader reader = Files.newBufferedReader(file, set)) {
+//            String line = null;
+//            line = reader.readLine();
+//            processHeaders(line);
+//            while ((line = reader.readLine()) != null) {
+//                processLine(line);
+//            }
+//        } catch (IOException x) {
+//            System.err.format("IOException: %s%n", x);
+//        }
     }
 
     private void processHeaders(final String headersString) {
@@ -71,12 +71,12 @@ public class Builder {
         String[] split = line.split(",");
         String username = split[headers.get(USERNAME_KEY)];
 
-        HashSet<String> order_values = new HashSet<>(ORDER_KEYS.length);
+        HashSet<String> order_values = new HashSet<String>(ORDER_KEYS.length);
         for (String orders_key: ORDER_KEYS) {
             order_values.add( split[headers.get(orders_key)] );
         }
 
-        HashSet<String> trans_values = new HashSet<>(TRANS_KEYS.length);
+        HashSet<String> trans_values = new HashSet<String>(TRANS_KEYS.length);
         for ( String trans_key: TRANS_KEYS) {
             trans_values.add( split[headers.get(trans_key)] );
         }
